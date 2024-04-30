@@ -75,7 +75,7 @@ const MoviePage = () => {
                       ? details.release_date.substring(0, 4)
                       : "-"}
                     <span className="imdb-rating">
-                      IMDB: {details.vote_average}
+                      IMDB: {details.vote_average.toFixed(1)}
                     </span>
                   </p>
 
