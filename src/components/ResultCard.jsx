@@ -9,7 +9,7 @@ const ResultCard = ({ movie }) => {
   let storedMovieWatched = watched.find((o) => o.id === movie.id);
 
   const watchlistDisabled = storedMovie || storedMovieWatched ? true : false;
-  console.log(movie);
+
   return (
     <div className="result-card">
       <div className="poster-wrapper">

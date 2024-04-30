@@ -24,7 +24,6 @@ const MoviePage = () => {
         );
         const data = await res.json();
         setDetails(data);
-        console.log(data);
       } catch (error) {
         console.log("Error fetching data", error);
       }

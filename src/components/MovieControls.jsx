@@ -22,7 +22,7 @@ const MovieControls = ({ movie, type }) => {
           </button>
 
           <Link to={`/${movie.id}`} className="ctrl-btn">
-            <i class="fa fa-info-circle"></i>
+            <i className="fa fa-info-circle"></i>
           </Link>
 
           <button
@@ -41,7 +41,7 @@ const MovieControls = ({ movie, type }) => {
           </button>
 
           <Link to={`/${movie.id}`} className="ctrl-btn">
-            <i class="fa fa-info-circle"></i>
+            <i className="fa fa-info-circle"></i>
           </Link>
 
           <button
