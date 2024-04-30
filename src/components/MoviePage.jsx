@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 
 const MoviePage = () => {
   const { addMovieToWatchlist, watchlist, watched } = useContext(GlobalContext);
@@ -37,6 +37,13 @@ const MoviePage = () => {
     : null;
 
   const watchlistDisabled = storedMovie || storedMovieWatched ? true : false;
+
+  //redirect
+  let navigate = useNavigate();
+  const routeChange = () => {
+    let path = "/watchlist";
+    navigate(path);
+  };
 
   return (
     <div className="movie-page-details">
@@ -92,14 +99,20 @@ const MoviePage = () => {
                   <p>Duration: {details.runtime} min</p>
                   <p>Country: {details.origin_country}</p>
 
-                  <div className="controls">
+                  <div className="movie-page-controls">
                     <button
-                      className="btn"
+                      className="btn add-watch-btn"
                       disabled={watchlistDisabled}
-                      onClick={() => addMovieToWatchlist(details)}
+                      onClick={() => {
+                        addMovieToWatchlist(details);
+                        routeChange();
+                      }}
                     >
-                      Add Movie to watchlist
+                      + Add Movie
                     </button>
+                    <Link to="/watchlist" className="btn back-btn">
+                      Go back to Watch List
+                    </Link>
                   </div>
                 </div>
               </div>

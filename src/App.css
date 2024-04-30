@@ -243,15 +243,8 @@ header .nav-links li:last-child {
 }
 
 .movie-page-details .poster-details-wrapper img {
-  width: 300px;
+  width: 350px;
   height: auto;
-  background-color: #dbdada;
-  display: block;
-  color: transparent;
-}
-
-.poster-details-wrapper img {
-  height: 120px;
   background-color: #dbdada;
   display: block;
   color: transparent;
@@ -319,9 +312,20 @@ header .nav-links li:last-child {
 .home-div {
   display: flex;
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
+}
+
+.movie-page-controls {
+  margin-top: 2rem;
+}
+
+.add-watch-btn {
+  margin-right: 1rem;
+}
+
+.back-btn {
+  background-color: #f7b928;
 }
 
 @media (max-width: 768px) {
@@ -346,6 +350,14 @@ header .nav-links li:last-child {
 
   .movie-page-container {
     height: 150vh;
+  }
+  .movie-page-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .add-watch-btn {
+    margin: 1rem 0 1.5rem;
   }
 }
 
